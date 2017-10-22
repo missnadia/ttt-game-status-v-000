@@ -37,11 +37,7 @@ def over?(board)
 end
 
 def winner(board)
-  if board[4] == "X"
-    "X"
-  elsif board[4] == "O"
-    "O"
-  else
-    nil
+  if win = won?(board)
+    board[win.first]
   end
 end
